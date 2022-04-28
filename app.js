@@ -125,6 +125,37 @@ function addPoke(nb){
     index += nb;
 }
 
+// Recherche
+
+searchInput.addEventListener('keyup', recherche);
+
+function recherche(){
+    if(index < 151){
+        addPoke(130);
+    }
+
+    let filter, allLi, titleValue, allTitles;
+
+    filter = searchInput.value.toUpperCase();
+    allLi = document.querySelector('li');
+    allTitles = document.querySelector('li > h5');
+
+    for(i = 0; i < allLi.length; i++){
+        titleValue = allTitles[i].innerText;
+
+        if(titleValue.toUpperCase().indexOf(filter) > -1){
+            allLi[i].style.display = "flex";
+        }else{
+            allLi[i].style.display = "none";
+        }
+    }
+
+}
+
+
+
+
+
 
 
 
