@@ -3,6 +3,7 @@ let tableauFin = [];
 
 const searchInput = document.querySelector('.recherche-poke input');
 const listPoke = document.querySelector('.liste-poke');
+const chargement = document.querySelector('.loader');
 
 const types = {
     grass: '#78c850',
@@ -68,6 +69,7 @@ function fetchPokemonComplet(pokemon){
                 // console.log(tableauFin);
 
                 createCard(tableauFin);
+                chargement.style.display = "none"
             }
         })
     })
