@@ -127,6 +127,16 @@ function addPoke(nb){
 
 // Recherche
 
+// POUR RECHERCHER VIA LE BUTTON DECOMMENTER ICI ET LE BUTTON ET COMMENTER LA LIGNE 140
+
+// const formRecherche = document.querySelector('form');
+// formRecherche.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     recherche();
+    // })
+
+
+
 searchInput.addEventListener('keyup', recherche);
 
 function recherche(){
@@ -137,8 +147,8 @@ function recherche(){
     let filter, allLi, titleValue, allTitles;
 
     filter = searchInput.value.toUpperCase();
-    allLi = document.querySelector('li');
-    allTitles = document.querySelector('li > h5');
+    allLi = document.querySelectorAll('li');
+    allTitles = document.querySelectorAll('li > h5');
 
     for(i = 0; i < allLi.length; i++){
         titleValue = allTitles[i].innerText;
